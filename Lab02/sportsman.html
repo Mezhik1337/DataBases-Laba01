@@ -1,0 +1,17 @@
+{% extends 'Mezhik/base.html' %}
+{% block title %}
+{{ title }}
+{% endblock %}
+
+
+{% block body %}
+    <div class = 'container'>
+        <h1> Full Sportsman information</h1>
+    </div>
+    {% for el in sportsman %}
+        <div class ="alert alert-warning mt-2">
+            <h3>{{ el.sportsman_name }}</h3>
+            <p><b>{{ el.date_of_birth }} | {{ el.weight }} kg | Sex: {{el.sex}} | {{el.grade}} Grade | Trainer: {{el.trainer}} | Team: {{el.team}} | City: {{el.city}}</b></p>
+        </div>
+    {% endfor %}
+{% endblock %}
