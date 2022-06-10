@@ -1,0 +1,35 @@
+{% extends 'Mezhik/base.html' %}
+{% block title %}
+Add sportsman
+{% endblock %}
+
+
+{% block body %}
+    <h1>Add sportsman</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class ="alert alert-warning mt-2">
+        <h7>Enter full sportsman name</h7><br>
+        {{ form.sportsman_name }}<br>
+        <h7>Enter sportsman's date of birth (0000-00-00)</h7><br>
+        {{ form.date_of_birth }}<br>
+        <h7>Sex</h7><br>
+        {{ form.sex }}<br>
+        <h7>Enter weight</h7><br>
+        {{ form.weight }}<br>
+        <h7>Enter grade</h7><br>
+        {{ form.grade }}<br>
+        <h7>Enter trainer</h7><br>
+        {{ form.trainer }}<br>
+        <h7>Enter team</h7><br>
+        {{form.team}}<br>
+        <h7>Enter city</h7><br>
+        {{form.city}}<br>
+        </div>
+
+        <button type="submit" class ="btn btn-success">Add</button>
+        <span>{{ error }}</span>
+    </form>
+
+
+{% endblock %}
