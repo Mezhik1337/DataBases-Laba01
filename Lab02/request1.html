@@ -1,0 +1,22 @@
+{% extends 'Mezhik/base.html' %}
+
+{% load static %}
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block code %}
+
+{% endblock %}
+
+{% block body %}
+    <div class = 'container'>
+        <h1> Усі спортсмени, що народилися у Києві</h1>
+    </div>
+    {% for el in sportsman %}
+        <div class ="alert alert-warning mt-2">
+            <h3>{{ el.sportsman_name }}</h3>
+            <p><b>{{ el.date_of_birth }} | {{ el.weight }} kg | Sex: {{el.sex}} | {{el.grade}} Grade | Trainer: {{el.trainer}} | Team: {{el.team}} | City: {{el.city}}</b></p>
+        </div>
+    {% endfor %}
+{% endblock %}
