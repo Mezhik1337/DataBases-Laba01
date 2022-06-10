@@ -1,0 +1,83 @@
+{% extends 'Mezhik/base.html' %}
+
+{% load static %}
+{% block title %}
+{{ title }}
+{% endblock %}
+
+
+{% block code %}
+    <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+        <div class="col-md-6 px-0">
+        <h1 class="display-4 fst-italic">This site is about the database of sportsmans</h1>
+        <p class="lead my-3">Full information about the owner and functionality can be found by clicking on the link.</p>
+        <p class="lead mb-0"><a href="/Mezhik/about" class="text-white fw-bold">Continue reading...</a></p>
+        </div>
+    </div>
+{% endblock %}
+{% block body %}
+<div class="container px-4 py-5" id="custom-cards">
+    <h2 class="pb-2 border-bottom">Everything in your mind!</h2>
+
+    <div class="row row-cols-3 row-cols-lg-3  align-items-stretch g-4 py-3">
+      <div class="col" width ="300">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" Id = 'bg'style="background-image: url('{% static 'images/photo1.jpeg'%}');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Work!</h2>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                <small>Vinnitsya</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+                <small>One year</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" witdth ="300">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" Id = 'bg1'style="background-image: url('{% static 'images/photo2.jpeg'%}');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Win!</h2>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+                <small>4 year</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" width="300" height ="400">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" Id='bg2'style="background-image: url('{% static 'images/photo3.jpeg'%}');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Chill!</h2>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                <small>Ochakov</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+                <small>One year</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
